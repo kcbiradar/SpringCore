@@ -8,15 +8,16 @@
 	https://www.springframework.org/schema/beans/spring-beans.xsd
 	http://www.springframework.org/schema/context
 	http://www.springframework.org/schema/context/spring-context.xsd">
-	<bean name = "student" class="com.springcore.Student">
-		<property name = "id">
-			<value>89034832</value>
-		</property>
-		<property name = "name">
-			<value>Hello</value>
-		</property>
-		<property name = "address">
-			<value>Hell</value>
-		</property>
+	
+	<bean name = "address" class="com.springcore.autowire.Address">
+		<property name="street" value = "Hostel road" />
+		<property name="city" value = "Bangalore" />
 	</bean>
+	
+	<bean name = "company" class = "com.springcore.autowire.Company">
+		<property name = "name" value = "Google"/>
+		<property name = "city" value = "Bangalore"/>
+	</bean>
+	
+	<bean name ="emp1" class="com.springcore.autowire.Emp"  autowire="byName" />
 </beans>
